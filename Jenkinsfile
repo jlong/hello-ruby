@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'bundle install && bundle exec rspec'
+        sh 'bundle install --jobs=4 --retry=3 --path vendor/bundle'
+        sh 'bundle exec rspec'
       }
     }
   }
