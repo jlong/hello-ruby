@@ -3,5 +3,5 @@ node {
   checkout scm
 
   stage "Test"
-  sh "rake test"
+  sh "bundle exec rake test"
 }
