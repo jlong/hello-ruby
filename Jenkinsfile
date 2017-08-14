@@ -4,5 +4,5 @@ node {
 
   stage "Test"
   sh "bundle install"
-  sh "bundle exec rake test"
+  sh "bundle exec rspec"
 }
